@@ -1,0 +1,19 @@
+.autocomplete-container {
+  display: flex;
+  max-width: 300px;
+  align-items: stretch;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.suggestions-container {
+  margin: 0;
+  padding-left: 10px;
+  display: grid;
+  background-color: rgb(93, 93, 93);
+  text-align: justify;
+}
+
+.suggestions-container > li {
+  overflow: hidden;
+}
