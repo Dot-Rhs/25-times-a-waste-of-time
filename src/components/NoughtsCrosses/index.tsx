@@ -56,12 +56,12 @@ export const NoughtsCross = () => {
     if (!winner(squares) && squares.every((item) => item !== "")) {
       setStatus(() => "You somehow drew in this very balanced game...");
     } else if (winner(squares)) {
-      setStatus(() => `Winner is ${winner(squares)}`);
-    } else setStatus(() => `Next player is ${xTurn ? "O" : "X"}`);
+      setStatus(() => `Winner is ${ winner(squares) }`);
+    } else setStatus(() => `Next player is ${ xTurn ? "O" : "X" }`);
   }, [squares, xTurn]);
 
   return (
-    <div className="container">
+    <div className="game-container">
       <div className="row">
         <Square value={squares[0]} onClick={() => handleClick(0)} />
         <Square value={squares[1]} onClick={() => handleClick(1)} />
