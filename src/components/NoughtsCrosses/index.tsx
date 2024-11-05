@@ -14,6 +14,11 @@ export const NoughtsCross = () => {
   const [xTurn, setXTurn] = useState(true);
   const [status, setStatus] = useState("");
 
+  // TODO:
+  // choose player
+  // win counter
+  // FORCE WIN option (rearrange the squares)
+
   const handleClick = (currentSquare) => {
     let squaresCopy = [...squares];
 
@@ -56,12 +61,12 @@ export const NoughtsCross = () => {
     if (!winner(squares) && squares.every((item) => item !== "")) {
       setStatus(() => "You somehow drew in this very balanced game...");
     } else if (winner(squares)) {
-      setStatus(() => `Winner is ${ winner(squares) }`);
-    } else setStatus(() => `Next player is ${ xTurn ? "O" : "X" }`);
+      setStatus(() => `Winner is ${winner(squares)}`);
+    } else setStatus(() => `Next player is ${xTurn ? "O" : "X"}`);
   }, [squares, xTurn]);
 
   return (
-    <div className="game-container">
+    <div className="container">
       <div className="row">
         <Square value={squares[0]} onClick={() => handleClick(0)} />
         <Square value={squares[1]} onClick={() => handleClick(1)} />
