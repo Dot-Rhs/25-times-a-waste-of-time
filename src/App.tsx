@@ -22,6 +22,9 @@ import FeatureFlagsGlobalState from "./components/FeatureFlag/context";
 import { FetchHookTest } from "./components/useFetch/test";
 import { UseClickOutsideTest } from "./components/useClickOutside/test";
 import { UseWindowResizeTest } from "./components/useWindowResize/test";
+import { ScrollToTopBottom } from "./components/ScrollToTopBottom";
+import { ScrollToSection } from "./components/ScrollToSection";
+import { WeatherApp } from "./components/WeatherApp";
 
 function App() {
   return (
@@ -45,7 +48,12 @@ function App() {
       </FeatureFlagsGlobalState> */}
       {/* <FetchHookTest /> */}
       {/* <UseClickOutsideTest /> */}
-      <UseWindowResizeTest />
+      {/* <UseWindowResizeTest /> */}
+      {/* <ScrollIndicator url={`https://dummyjson.com/products`} /> */}
+      {/* <ScrollToTopBottom /> */}
+      {/* <ScrollToSection />
+       */}
+      <WeatherApp />
     </div>
   );
 }
