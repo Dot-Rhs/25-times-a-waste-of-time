@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { GlobalContext } from "../context";
+import { GlobalContext } from "../../context";
 
 const NavBar = () => {
-  const { searchParam, setSearchParam } = useContext(GlobalContext);
+  const { searchParam, setSearchParam, handleSubmit } = useContext(GlobalContext);
   console.log("johnson: ", searchParam);
 
   return (
@@ -11,10 +11,12 @@ const NavBar = () => {
       <h2 className="text-2xl font-semibold">
         <NavLink to={"/"}>Recipes</NavLink>
       </h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="search"
+          value={searchParam}
+          onChange={e => setSearchParam(() => e.target.value)}
           placeholder="Enter Items..."
           className="bg-white/75 p-3 px-8 rounded-full outline-none lg:w-96 shadow-lg shadow-red-100 focus:shadow-red-200"
         />

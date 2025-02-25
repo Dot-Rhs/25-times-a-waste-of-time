@@ -26,7 +26,7 @@ import { ScrollToTopBottom } from "./components/ScrollToTopBottom";
 import { ScrollToSection } from "./components/ScrollToSection";
 import { WeatherApp } from "./components/WeatherApp";
 import FoodRecipe from "./components/FoodRecipe";
-import GlobalState from "./components/FoodRecipe/components/context";
+import GlobalState from "./components/FoodRecipe/context";
 
 function App() {
   return (
