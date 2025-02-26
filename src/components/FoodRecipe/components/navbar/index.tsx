@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../../context";
 
 const NavBar = () => {
-  const { searchParam, setSearchParam, handleSubmit } = useContext(GlobalContext);
-  console.log("johnson: ", searchParam);
+  const { searchParam, setSearchParam, handleSubmit } =
+    useContext(GlobalContext);
 
   return (
     <nav className="flex justify-between item-center py-8 container mx-auto flex-col lg:flex-row gap-5 lg:gap">
@@ -16,7 +16,7 @@ const NavBar = () => {
           type="text"
           name="search"
           value={searchParam}
-          onChange={e => setSearchParam(() => e.target.value)}
+          onChange={(e) => setSearchParam(() => e.target.value)}
           placeholder="Enter Items..."
           className="bg-white/75 p-3 px-8 rounded-full outline-none lg:w-96 shadow-lg shadow-red-100 focus:shadow-red-200"
         />

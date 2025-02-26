@@ -56,9 +56,8 @@ function App() {
       {/* <ScrollToSection />
        */}
       {/* <WeatherApp /> */}
-      <GlobalState>
-        <FoodRecipe />
-      </GlobalState>
+
+      <FoodRecipe />
     </div>
   );
 }
