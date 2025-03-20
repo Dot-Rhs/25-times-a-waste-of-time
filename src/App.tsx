@@ -27,6 +27,7 @@ import { ScrollToSection } from "./components/ScrollToSection";
 import { WeatherApp } from "./components/WeatherApp";
 import FoodRecipe from "./components/FoodRecipe";
 import GlobalState from "./components/FoodRecipe/context";
+import ShoppingCartApp from "./components/ShoppingCart";
 
 function App() {
   return (
@@ -57,7 +58,8 @@ function App() {
        */}
       {/* <WeatherApp /> */}
 
-      <FoodRecipe />
+      {/* <FoodRecipe /> */}
+      <ShoppingCartApp />
     </div>
   );
 }
